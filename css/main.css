@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-image: url('../a.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh; 
+    margin: 0;
+}
+
+#container {
+    margin: auto;
+    margin-top: 45px;
+}
+
+#header {
+    font-size: 40px;
+    padding-top: 150px;
+    text-align: center;
+    font-family: "Press Start 2P", cursive;
+    color: white;
+}
+
+#header p {
+    margin-top: 25px;
+    color: red;
+    text-shadow: 0px 0px 10px, 0px 0px 20px;
+}
+.kutu{
+    padding-top: 45px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.kutu ul{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+}
+.kutu li {
+    list-style-type: none;
+}
+.kutu img{
+    
+    width: 100px;
+    height: 100px;
+    display: flex;
+}
+
+.kutu1, .kutu2, .kutu3, .kutu4{
+    scale: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 2px solid #00f3ff;
+    border-radius: 15px;
+    padding: 10px;
+    width: auto;
+    height: auto;
+    transition: all 0.5s ease;
+    opacity: 1;
+    animation: sahne 0.8s backwards;
+}
+
+.kutu1:hover, .kutu2:hover, .kutu3:hover, .kutu4:hover{
+    border: 2px solid #009099;
+    transform: scale(1.1);
+}
+.typing::after{
+    content: '|';
+    margin-left: 5px;
+    animation: blink 1s infinite;
+    color: #009099;
+    animation-delay: all 0.5s;
+}
+
+@keyframes sahne {
+    0%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50%{
+        opacity: 1;
+        transform: translateY(-10px);
+
+    }
+
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.kutu1 {
+    animation-delay: 5.5s; 
+}
+
+.kutu2 {
+    animation-delay: 5.7s; 
+}
+
+.kutu3 {
+    animation-delay: 5.9s; 
+}
+
+
+.kutu4 {
+    animation-delay: 6.1s; 
+}

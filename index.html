@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width:768px)">
+    <title>BIO</title>
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <h1 id="line1"></h1>
+            <p id="line2"></p>
+        </div>  
+        
+        <div class="kutu">
+            <ul>
+                <li><a href="https://www.instagram.com/kkonasoglu/"><div class="kutu1"><img src="images/inst.PNG" alt=""></div></a></li>
+                <li><a href="https://github.com/kkonasoglu" target="_blank"><div class="kutu2"><img src="images/images github.png" alt=""></div></a></li>
+                <li><a href="https://www.linkedin.com/in/k%C3%BCr%C5%9Fat-kona%C5%9Fo%C4%9Flu-79052538a/" target="_blank"><div class="kutu3"><img src="images/link.PNG" alt=""></div></a></li>
+                <li><a href=https://steamcommunity.com/profiles/76561199103903428><div class="kutu4"><img src="images/Steam_icon_logo.svg.png" alt=""></div></a></li>
+            </ul>
+        </div>
+
+    </div>
+
+
+    <script>
+            const text1 = "KÜRŞAT KONAŞOĞLU"
+            const text2 = "WEB PROGRAMMER | Game Dev"
+            const text3 = "Game Developer"
+            //hangi elemente yazılacak
+            const line1Element = document.getElementById("line1");
+            const line2Element = document.getElementById("line2");
+
+            let i = 0;
+            let j = 0;
+            const speed = 100; //düşük = hızlı
+
+            function typeWriter1(){
+                if(i<text1.length){
+                    //imleci eklemek için
+                    line1Element.classList.add("typing");
+                    //harfk eklemek için
+                    line1Element.innerHTML =text1.substring(0, i + 1);
+                    i++;
+                    setTimeout(typeWriter1, speed);
+                } else {
+                    //ilk satırdan sonra ikinci satıra geçmesi için
+                    line1Element.classList.remove("typing");
+                    setTimeout(typeWriter2, 1000); //yarım saniye bekle
+                }
+            }
+
+            function typeWriter2(){
+                if(j<text2.length){
+                    line2Element.classList.add("typing");
+                    line2Element.innerHTML = text2.substring(0, j + 1);
+                    j++;
+                    setTimeout(typeWriter2, speed);
+
+                }
+
+                else{
+                    line2Element.classList.remove("typing");
+                    
+                }
+            }
+
+    
+
+            window.onload = typeWriter1;
+
+
+        </script>
+    
+    
+</body>
+</html>
